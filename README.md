@@ -1,6 +1,6 @@
-This is repository which contains subproject to upgrade Juwei17 mount
+This is repository which contains subprojects to upgrade Juwei17 mount
 
-![Juwei17 Upgrade](Images/main.JPG)
+<img src="./Images/main.JPEG" alt="Juwei17 Upgrade" width="50%" />
 
 Upgrade Features
 - Larger on/off switch
