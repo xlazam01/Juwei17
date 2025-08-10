@@ -1,0 +1,2216 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "871f9bbe-10a1-42ab-b04a-98f850c50335")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Driver_Motor:TMC5160A-TA"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -11.43 38.1 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right)
+				)
+			)
+			(property "Value" "TMC5160A-TA"
+				(at 10.16 38.1 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_QFP:TQFP-48-1EP_7x7mm_P0.5mm_EP5x5mm_ThermalVias"
+				(at 0 -50.8 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.trinamic.com/fileadmin/assets/Products/ICs_Documents/TMC5160A_Datasheet_Rev1.14.pdf"
+				(at 0 10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "20A Driver for two-phase bipolar stepper motor, SPI, UART, TQFP-48"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "stepper motor driver trinamic"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TQFP*1EP*7x7mm*P0.5mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TMC5160A-TA_1_0"
+				(rectangle
+					(start -15.24 -35.56)
+					(end 15.24 35.56)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "TMC5160A-TA_1_1"
+				(pin output line
+					(at 17.78 17.78 180)
+					(length 2.54)
+					(name "HB1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 17.78 -7.62 180)
+					(length 2.54)
+					(name "SRBL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -33.02 0)
+					(length 2.54)
+					(name "TST_MODE"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 25.4 0)
+					(length 2.54)
+					(name "CLK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 20.32 0)
+					(length 2.54)
+					(name "~{CS}/CFG3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 17.78 0)
+					(length 2.54)
+					(name "SCK/CFG2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 15.24 0)
+					(length 2.54)
+					(name "SDI/CFG1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 12.7 0)
+					(length 2.54)
+					(name "SDO/CFG0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 7.62 0)
+					(length 2.54)
+					(name "REFL/STEP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 5.08 0)
+					(length 2.54)
+					(name "REFR/DIR"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 -38.1 90)
+					(length 2.54)
+					(name "GNDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 17.78 -15.24 180)
+					(length 2.54)
+					(name "CB1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -7.62 38.1 270)
+					(length 2.54)
+					(name "VCC_IO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -27.94 0)
+					(length 2.54)
+					(name "SD_MODE"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -30.48 0)
+					(length 2.54)
+					(name "SPI_MODE"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -2.54 0)
+					(length 2.54)
+					(name "ENCB/DCEN/CFG4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -5.08 0)
+					(length 2.54)
+					(name "ENCA/DCIN/CFG5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 0 0)
+					(length 2.54)
+					(name "ENCN/DCO/CFG6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "25"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 -15.24 0)
+					(length 2.54)
+					(name "SWN/DIAG0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "26"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 -17.78 0)
+					(length 2.54)
+					(name "SWP/DIAG1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "27"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -10.16 0)
+					(length 2.54)
+					(name "~{DRV_EN}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "28"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -5.08 38.1 270)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "29"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 0 38.1 270)
+					(length 2.54)
+					(name "12VOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -2.54 -38.1 90)
+					(length 2.54) hide
+					(name "GNDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "30"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -17.78 30.48 0)
+					(length 2.54)
+					(name "CPO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "31"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -17.78 27.94 0)
+					(length 2.54)
+					(name "CPI"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "32"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 5.08 38.1 270)
+					(length 2.54)
+					(name "VS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "33"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -17.78 33.02 0)
+					(length 2.54)
+					(name "VCP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "34"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 17.78 -12.7 180)
+					(length 2.54)
+					(name "CA2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "35"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 25.4 180)
+					(length 2.54)
+					(name "HA2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "36"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 17.78 22.86 180)
+					(length 2.54)
+					(name "BMA2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "37"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 20.32 180)
+					(length 2.54)
+					(name "LA2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "38"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 27.94 180)
+					(length 2.54)
+					(name "LA1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "39"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 38.1 270)
+					(length 2.54)
+					(name "VSA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 17.78 30.48 180)
+					(length 2.54)
+					(name "BMA1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "40"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 33.02 180)
+					(length 2.54)
+					(name "HA1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "41"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 17.78 -10.16 180)
+					(length 2.54)
+					(name "CA1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "42"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 17.78 -17.78 180)
+					(length 2.54)
+					(name "CB2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "43"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 10.16 180)
+					(length 2.54)
+					(name "HB2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "44"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 17.78 7.62 180)
+					(length 2.54)
+					(name "BMB2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "45"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 5.08 180)
+					(length 2.54)
+					(name "LB2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "46"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 12.7 180)
+					(length 2.54)
+					(name "LB1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "47"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 17.78 15.24 180)
+					(length 2.54)
+					(name "BMB1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "48"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 -38.1 90)
+					(length 2.54)
+					(name "EP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "49"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at -2.54 38.1 270)
+					(length 2.54)
+					(name "5VOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -38.1 90)
+					(length 2.54)
+					(name "GNDA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 17.78 -2.54 180)
+					(length 2.54)
+					(name "SRAL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 17.78 0 180)
+					(length 2.54)
+					(name "SRAH"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 17.78 -5.08 180)
+					(length 2.54)
+					(name "SRBH"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Transistor_FET:FDMC8032L"
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "FDMC8032L"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_SON:Fairchild_DualPower33-6_3x3mm"
+				(at 5.08 -1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.onsemi.com/pub/Collateral/FDMC8032L-D.PDF"
+				(at 5.08 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "7A Id, 40V Vds, Dual N-Channel MOSFET, 20mOhm Ron, Power33 Package"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Dual N-Channel MOSFET"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Fairchild*DualPower33*3x3mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "FDMC8032L_0_1"
+				(polyline
+					(pts
+						(xy 0.254 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "FDMC8032L_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "FDMC8032L_2_1"
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:FDMC8032L")
+		(at 179.07 148.59 0)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "254d4609-423f-4590-8d28-9d604041494b")
+		(property "Reference" "Q7"
+			(at 185.42 147.3199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "FDMC8032L"
+			(at 185.42 149.8599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:Fairchild_DualPower33-6_3x3mm"
+			(at 184.15 150.495 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/FDMC8032L-D.PDF"
+			(at 184.15 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "7A Id, 40V Vds, Dual N-Channel MOSFET, 20mOhm Ron, Power33 Package"
+			(at 179.07 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "121a7df3-e555-4819-845e-617720f26096")
+		)
+		(pin "6"
+			(uuid "04523e2d-1ee6-4998-a7e6-0e791e32556e")
+		)
+		(pin "1"
+			(uuid "27976ac0-dd58-4192-81f7-0ccd57c54985")
+		)
+		(pin "4"
+			(uuid "2f6a8b2a-43cf-4262-b3cc-3889b504dcf2")
+		)
+		(pin "3"
+			(uuid "885c2622-a9c9-45b8-a121-b62934d5c871")
+		)
+		(pin "2"
+			(uuid "a68bae3e-3f6a-4207-9177-9113583a4cfd")
+		)
+		(instances
+			(project "juwei17onstep"
+				(path "/d31209f8-dbb9-467e-9285-4da18c75afe0/401d6cc5-33c1-4a7d-b12f-7775b1a2cdc7"
+					(reference "Q7")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:FDMC8032L")
+		(at 184.15 46.99 0)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2bb2442a-e896-4a99-8a54-dd477066e48a")
+		(property "Reference" "Q5"
+			(at 190.5 45.7199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "FDMC8032L"
+			(at 190.5 48.2599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:Fairchild_DualPower33-6_3x3mm"
+			(at 189.23 48.895 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/FDMC8032L-D.PDF"
+			(at 189.23 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "7A Id, 40V Vds, Dual N-Channel MOSFET, 20mOhm Ron, Power33 Package"
+			(at 184.15 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "121a7df3-e555-4819-845e-617720f26095")
+		)
+		(pin "6"
+			(uuid "dcd4beb8-fb5e-4bef-9440-1fcb0f77f434")
+		)
+		(pin "1"
+			(uuid "27976ac0-dd58-4192-81f7-0ccd57c54984")
+		)
+		(pin "4"
+			(uuid "0334d6ac-4ea1-44de-94f8-0bef0001a77f")
+		)
+		(pin "3"
+			(uuid "19e94478-df53-4f5d-9bef-0967b8623149")
+		)
+		(pin "2"
+			(uuid "a68bae3e-3f6a-4207-9177-9113583a4cfc")
+		)
+		(instances
+			(project "juwei17onstep"
+				(path "/d31209f8-dbb9-467e-9285-4da18c75afe0/401d6cc5-33c1-4a7d-b12f-7775b1a2cdc7"
+					(reference "Q5")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:FDMC8032L")
+		(at 181.61 66.04 0)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5495c00e-aaf1-4022-badf-f07974406863")
+		(property "Reference" "Q6"
+			(at 187.96 64.7699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "FDMC8032L"
+			(at 187.96 67.3099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:Fairchild_DualPower33-6_3x3mm"
+			(at 186.69 67.945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/FDMC8032L-D.PDF"
+			(at 186.69 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "7A Id, 40V Vds, Dual N-Channel MOSFET, 20mOhm Ron, Power33 Package"
+			(at 181.61 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "121a7df3-e555-4819-845e-617720f26095")
+		)
+		(pin "6"
+			(uuid "614d585c-5e1c-4674-9d22-dac1e0e8c7f5")
+		)
+		(pin "1"
+			(uuid "27976ac0-dd58-4192-81f7-0ccd57c54984")
+		)
+		(pin "4"
+			(uuid "34ac7008-a034-4dd9-ab61-111791c3b0d3")
+		)
+		(pin "3"
+			(uuid "eecdb4de-e88c-42ef-935a-0afc77778c8e")
+		)
+		(pin "2"
+			(uuid "a68bae3e-3f6a-4207-9177-9113583a4cfc")
+		)
+		(instances
+			(project "juwei17onstep"
+				(path "/d31209f8-dbb9-467e-9285-4da18c75afe0/401d6cc5-33c1-4a7d-b12f-7775b1a2cdc7"
+					(reference "Q6")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:FDMC8032L")
+		(at 185.42 29.21 0)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "816f1117-abde-4c49-bac9-f4822b5092d3")
+		(property "Reference" "Q4"
+			(at 191.77 27.9399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "FDMC8032L"
+			(at 191.77 30.4799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:Fairchild_DualPower33-6_3x3mm"
+			(at 190.5 31.115 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/FDMC8032L-D.PDF"
+			(at 190.5 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "7A Id, 40V Vds, Dual N-Channel MOSFET, 20mOhm Ron, Power33 Package"
+			(at 185.42 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "121a7df3-e555-4819-845e-617720f26095")
+		)
+		(pin "6"
+			(uuid "3afe10bb-a731-496b-a565-a53257311201")
+		)
+		(pin "1"
+			(uuid "27976ac0-dd58-4192-81f7-0ccd57c54984")
+		)
+		(pin "4"
+			(uuid "178d3d38-b815-4a31-807b-47b510bf8ee2")
+		)
+		(pin "3"
+			(uuid "5d773ce4-cecf-47fd-9668-19e53b11cf5f")
+		)
+		(pin "2"
+			(uuid "a68bae3e-3f6a-4207-9177-9113583a4cfc")
+		)
+		(instances
+			(project ""
+				(path "/d31209f8-dbb9-467e-9285-4da18c75afe0/401d6cc5-33c1-4a7d-b12f-7775b1a2cdc7"
+					(reference "Q4")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:FDMC8032L")
+		(at 182.88 111.76 0)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a738cc74-2715-48eb-808f-795cbe5dbce0")
+		(property "Reference" "Q8"
+			(at 189.23 110.4899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "FDMC8032L"
+			(at 189.23 113.0299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:Fairchild_DualPower33-6_3x3mm"
+			(at 187.96 113.665 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/FDMC8032L-D.PDF"
+			(at 187.96 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "7A Id, 40V Vds, Dual N-Channel MOSFET, 20mOhm Ron, Power33 Package"
+			(at 182.88 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "121a7df3-e555-4819-845e-617720f26098")
+		)
+		(pin "6"
+			(uuid "8c4cd7a7-b191-46c0-b5a6-56bc5f65fc0c")
+		)
+		(pin "1"
+			(uuid "27976ac0-dd58-4192-81f7-0ccd57c54987")
+		)
+		(pin "4"
+			(uuid "f89cefb8-742f-43ae-859a-237eb5d3f378")
+		)
+		(pin "3"
+			(uuid "fca13aee-f385-47bf-a380-eb44ae54e012")
+		)
+		(pin "2"
+			(uuid "a68bae3e-3f6a-4207-9177-9113583a4cff")
+		)
+		(instances
+			(project "juwei17onstep"
+				(path "/d31209f8-dbb9-467e-9285-4da18c75afe0/401d6cc5-33c1-4a7d-b12f-7775b1a2cdc7"
+					(reference "Q8")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:FDMC8032L")
+		(at 181.61 97.79 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cd2b44b4-d383-4309-89f1-50e7c70f8ff7")
+		(property "Reference" "Q8"
+			(at 187.96 96.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "FDMC8032L"
+			(at 187.96 99.0599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:Fairchild_DualPower33-6_3x3mm"
+			(at 186.69 99.695 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/FDMC8032L-D.PDF"
+			(at 186.69 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "7A Id, 40V Vds, Dual N-Channel MOSFET, 20mOhm Ron, Power33 Package"
+			(at 181.61 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "6e0c4e93-2f94-485e-8c1f-e475d676f0f0")
+		)
+		(pin "6"
+			(uuid "3afe10bb-a731-496b-a565-a53257311201")
+		)
+		(pin "1"
+			(uuid "7b7bda5d-3257-46ac-9c31-f8f3b82a810f")
+		)
+		(pin "4"
+			(uuid "178d3d38-b815-4a31-807b-47b510bf8ee2")
+		)
+		(pin "3"
+			(uuid "5d773ce4-cecf-47fd-9668-19e53b11cf5f")
+		)
+		(pin "2"
+			(uuid "ca1dce0c-e13c-4dca-bbca-0d690502812d")
+		)
+		(instances
+			(project "juwei17onstep"
+				(path "/d31209f8-dbb9-467e-9285-4da18c75afe0/401d6cc5-33c1-4a7d-b12f-7775b1a2cdc7"
+					(reference "Q8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Driver_Motor:TMC5160A-TA")
+		(at 106.68 91.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "db812254-f61c-4d9a-ad63-7d31842b4552")
+		(property "Reference" "U10"
+			(at 111.4141 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TMC5160A-TA"
+			(at 111.4141 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_QFP:TQFP-48-1EP_7x7mm_P0.5mm_EP5x5mm_ThermalVias"
+			(at 106.68 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.trinamic.com/fileadmin/assets/Products/ICs_Documents/TMC5160A_Datasheet_Rev1.14.pdf"
+			(at 106.68 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "20A Driver for two-phase bipolar stepper motor, SPI, UART, TQFP-48"
+			(at 106.68 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "36"
+			(uuid "6d8dfca8-3ac5-4197-89c5-d53c9977ec38")
+		)
+		(pin "44"
+			(uuid "569b114a-2f52-4449-b423-76bb4ee10de5")
+		)
+		(pin "49"
+			(uuid "f97cc53a-c272-485a-ae97-4d607f382758")
+		)
+		(pin "15"
+			(uuid "3b3968ed-4e79-4f70-bd40-8b70eed97e9f")
+		)
+		(pin "13"
+			(uuid "751ca7ff-a043-4ec2-b17d-227a8f118278")
+		)
+		(pin "21"
+			(uuid "abc2f138-6f6a-4ae8-be14-84eaca01b08d")
+		)
+		(pin "11"
+			(uuid "7e7c3e05-03ee-4b0d-a94a-40d8116564b2")
+		)
+		(pin "35"
+			(uuid "9307f388-ce63-40c7-b8ef-ae1363f5d596")
+		)
+		(pin "38"
+			(uuid "447fd18a-6231-4d5f-815a-c92f442fda04")
+		)
+		(pin "1"
+			(uuid "c8c8f52d-ddb8-4f17-83cf-335a43fcf1a9")
+		)
+		(pin "14"
+			(uuid "ee0d4812-a93c-40eb-9d1e-2784f5a7d677")
+		)
+		(pin "28"
+			(uuid "0a6e2b67-183c-4e1d-b0be-605e0293104a")
+		)
+		(pin "39"
+			(uuid "9bb3ad8f-43f6-44eb-b489-a3c26e08d945")
+		)
+		(pin "23"
+			(uuid "18fd9b2d-1bf2-4087-973e-68de7513fbde")
+		)
+		(pin "40"
+			(uuid "4ec0aefb-d6c8-4ca4-9431-2a90b91f4244")
+		)
+		(pin "20"
+			(uuid "3fc27a77-d20a-4937-a733-c5c4e3a57018")
+		)
+		(pin "30"
+			(uuid "caa3aff1-87e6-4e01-bbb5-e7a4b491a944")
+		)
+		(pin "45"
+			(uuid "89dbc07d-476f-43c5-ad89-19fed0f0bb19")
+		)
+		(pin "25"
+			(uuid "7e6b853c-6e45-4379-b9d7-803fa3778635")
+		)
+		(pin "46"
+			(uuid "5e8b9362-5430-4ca5-b73b-cb3f107df4d8")
+		)
+		(pin "22"
+			(uuid "1a4a06f3-8e96-459b-9282-acebb1180c6a")
+		)
+		(pin "47"
+			(uuid "8639ca87-0928-4a30-89a8-2133f47127ee")
+		)
+		(pin "32"
+			(uuid "4e3a5504-9374-47b0-b68a-b0265f251647")
+		)
+		(pin "12"
+			(uuid "00d626cc-c8e1-4588-b380-7d7617676d3c")
+		)
+		(pin "10"
+			(uuid "a98fc824-289c-4a8e-a7ee-b1f49eb6ab9b")
+		)
+		(pin "34"
+			(uuid "6e0edda4-e109-43c7-b32a-34f28b7fbd90")
+		)
+		(pin "37"
+			(uuid "2230dfc0-7039-4d86-8a6d-bf80564249dc")
+		)
+		(pin "5"
+			(uuid "2d050058-4719-4782-9b81-78d9ec9ea8a6")
+		)
+		(pin "7"
+			(uuid "98932ec1-70a2-4014-bc6c-5dbc63193b78")
+		)
+		(pin "9"
+			(uuid "3f365beb-8338-4538-8008-58291247a845")
+		)
+		(pin "27"
+			(uuid "bde6c245-5630-41ee-88fe-f0108966a868")
+		)
+		(pin "17"
+			(uuid "4e0b731c-16b4-4c38-9133-6219df70f728")
+		)
+		(pin "43"
+			(uuid "c3691198-1532-4f36-9428-1b1818803b4a")
+		)
+		(pin "18"
+			(uuid "b0d076e5-1880-45b8-a215-f4ecd0c53b7d")
+		)
+		(pin "26"
+			(uuid "b4f48cfb-d643-4e6c-8fc0-7a3eb9113ffc")
+		)
+		(pin "29"
+			(uuid "f5061a4c-a152-4745-b9fa-dc73f5baa175")
+		)
+		(pin "16"
+			(uuid "3c102c40-3f87-49da-9c49-064e35871d2c")
+		)
+		(pin "31"
+			(uuid "62bc641a-bd56-449d-9950-abbe5622cf25")
+		)
+		(pin "24"
+			(uuid "34634071-1507-4027-ba37-c8a709d15155")
+		)
+		(pin "2"
+			(uuid "08761a75-c968-4e1d-bd62-9b7f8ef845c0")
+		)
+		(pin "3"
+			(uuid "6b2d89c6-0801-444f-80c2-15bd1e71db80")
+		)
+		(pin "19"
+			(uuid "7e4a72bf-a143-4394-a9b8-d676babe872c")
+		)
+		(pin "33"
+			(uuid "d3211742-6bec-432f-9760-f5e18dae9a00")
+		)
+		(pin "4"
+			(uuid "b0448bef-c933-4644-8d4b-f6b454a7f66d")
+		)
+		(pin "41"
+			(uuid "c1a9f04e-3d71-442d-9a3b-ab6ea5454bdb")
+		)
+		(pin "42"
+			(uuid "c6e454d3-b90d-46cc-8df6-469c0485768f")
+		)
+		(pin "48"
+			(uuid "3cd0206a-49d5-4f18-af37-53b59c91834a")
+		)
+		(pin "6"
+			(uuid "10ce93bb-3f7c-44d4-a49c-b28c86ce2f13")
+		)
+		(pin "8"
+			(uuid "48d1277f-03b4-445c-8186-31110d39e54a")
+		)
+		(instances
+			(project ""
+				(path "/d31209f8-dbb9-467e-9285-4da18c75afe0/401d6cc5-33c1-4a7d-b12f-7775b1a2cdc7"
+					(reference "U10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:FDMC8032L")
+		(at 184.15 15.24 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e1c25512-f129-46aa-a58e-8a0dfdfc6721")
+		(property "Reference" "Q4"
+			(at 190.5 13.9699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "FDMC8032L"
+			(at 190.5 16.5099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:Fairchild_DualPower33-6_3x3mm"
+			(at 189.23 17.145 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/FDMC8032L-D.PDF"
+			(at 189.23 19.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "7A Id, 40V Vds, Dual N-Channel MOSFET, 20mOhm Ron, Power33 Package"
+			(at 184.15 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "121a7df3-e555-4819-845e-617720f26095")
+		)
+		(pin "6"
+			(uuid "3afe10bb-a731-496b-a565-a53257311201")
+		)
+		(pin "1"
+			(uuid "27976ac0-dd58-4192-81f7-0ccd57c54984")
+		)
+		(pin "4"
+			(uuid "178d3d38-b815-4a31-807b-47b510bf8ee2")
+		)
+		(pin "3"
+			(uuid "5d773ce4-cecf-47fd-9668-19e53b11cf5f")
+		)
+		(pin "2"
+			(uuid "a68bae3e-3f6a-4207-9177-9113583a4cfc")
+		)
+		(instances
+			(project ""
+				(path "/d31209f8-dbb9-467e-9285-4da18c75afe0/401d6cc5-33c1-4a7d-b12f-7775b1a2cdc7"
+					(reference "Q4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:FDMC8032L")
+		(at 181.61 129.54 0)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e81720f0-e2f9-48d1-a24f-d777f3819651")
+		(property "Reference" "Q9"
+			(at 187.96 128.2699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "FDMC8032L"
+			(at 187.96 130.8099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:Fairchild_DualPower33-6_3x3mm"
+			(at 186.69 131.445 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/FDMC8032L-D.PDF"
+			(at 186.69 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "7A Id, 40V Vds, Dual N-Channel MOSFET, 20mOhm Ron, Power33 Package"
+			(at 181.61 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "121a7df3-e555-4819-845e-617720f26097")
+		)
+		(pin "6"
+			(uuid "592f59e8-d75e-4dc6-bfed-2fabd0516261")
+		)
+		(pin "1"
+			(uuid "27976ac0-dd58-4192-81f7-0ccd57c54986")
+		)
+		(pin "4"
+			(uuid "6c289f96-99a7-41a7-a246-b67928a3e480")
+		)
+		(pin "3"
+			(uuid "9a923037-ba34-4ff5-90b7-95c7c29f7205")
+		)
+		(pin "2"
+			(uuid "a68bae3e-3f6a-4207-9177-9113583a4cfe")
+		)
+		(instances
+			(project "juwei17onstep"
+				(path "/d31209f8-dbb9-467e-9285-4da18c75afe0/401d6cc5-33c1-4a7d-b12f-7775b1a2cdc7"
+					(reference "Q9")
+					(unit 2)
+				)
+			)
+		)
+	)
+)
