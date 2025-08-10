@@ -1,0 +1,12 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run ESP32 Uploader",
+            "type": "shell",
+            "command": "python main.py",
+            "group": "build",
+            "problemMatcher": []
+        }
+    ]
+}
