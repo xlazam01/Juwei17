@@ -1,0 +1,31 @@
+Pøevod Solid Edge -> STEP
+Datum: ètvrtek,srpen 14,2025 03:12odp.
+Vıstupní soubor: F:\Projekty\Juwei17\CAD\complete_assembly.stp
+Autor: Unknown
+Organizace: Unknown
+Zdrojovı systém: Solid Edge
+
+Hardware:
+Procesor: AMD Ryzen 7 5700X 8-Core Processor             
+Operaèní systém: Windows 11 Professional Version:24H2 Build:26100 System Type:64-bit
+Instalovaná pamì: 31.92 GB
+
+Informace o softwaru
+Verze Parasolid: 37.0.118
+Verze PSBodyShop: 37.0.94
+Verze adaptéru STEP: 15.0.142
+Verze Solid Edge: 225.00.01.004 x64
+
+Monosti exportu STEP
+Formát exportu: AP214
+Exportovat konstrukèní plochy: Vypnuto
+Exportovat konstrukèní objemy: Vypnuto
+Exportovat konstrukèní dráty: Vypnuto
+Exportovat pouze zobrazené souèásti: Vypnuto
+Jednotky exportu: Millimeters
+Exportovat názvy souèástí komponent jako Unicode: Vypnuto
+Export PMI dat: Vypnuto
+
+Fáze 1 z 1 – pøevod souborù Parasolid na jiné datové typy…
+Proces pøevodu dokonèen
+Èas potøebnı k pøevodu:00 : 00 : 01
