@@ -191,6 +191,9 @@ This repository contains subprojects to upgrade the Juwei17 mount with enhanced 
 16. **Assembly complete!**
 
 
+<div align="center">
+    <img src="./Images/LoaderApp.png" alt="Juwei17 Upgrade" width="30%" />
+</div>
 
 ## 💻 Firmware Upload
 
