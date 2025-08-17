@@ -115,6 +115,7 @@ This repository contains subprojects to upgrade the Juwei17 mount with enhanced 
 
 - PEC
 
+---
 
 ## 🖼️ Photo Gallery
 <div align="center">
@@ -146,7 +147,7 @@ This repository contains subprojects to upgrade the Juwei17 mount with enhanced 
     <img src="./Images/IMG_4174.JPEG" alt="IMG_4174" width="30%" />
 </div>
 
-
+---
 
 ## 🛠️ Assembly Instructions
 
@@ -190,9 +191,10 @@ This repository contains subprojects to upgrade the Juwei17 mount with enhanced 
     - Screw in four screws for PCB from the botton of the mount
 16. **Assembly complete!**
 
+---
 
 <div align="center">
-    <img src="./Images/LoaderApp.png" alt="Juwei17 Upgrade" width="30%" />
+    <img src="./Images/LoaderApp.png" alt="Juwei17 Upgrade" width="50%" />
 </div>
 
 ## 💻 Firmware Upload
@@ -223,6 +225,7 @@ This repository contains subprojects to upgrade the Juwei17 mount with enhanced 
 14. **Finish:**
     - A soft reset will occur after some time, or you can power cycle the device manually.
 
+---
 
 ## ⚙️ Default Firmware Configuration
 
@@ -232,6 +235,8 @@ Firmmare configuration expects
 - Correct polarity of HAL sensors for homing - if not fullfiled, homing will not work correctly
 - Current is set to 1.0A for RUN and 1.3 for GOTO
 - Homing sense is HIGH
+
+---
 
 ## 🏗️ Build Your Own OnStepX
 
