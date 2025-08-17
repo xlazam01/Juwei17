@@ -4,11 +4,53 @@ import serial.tools.list_ports
 import subprocess
 
 class OnstepEspLoaderApp(tk.Tk):
+
     def __init__(self):
         super().__init__()
         self.title("OnstepEspLoader")
         self.geometry("700x500")
         self.resizable(True, True)
+
+        # --- Top: STM32 firmware selection ---
+        top_frame = ttk.Frame(self)
+        top_frame.pack(pady=(10, 0), fill=tk.X)
+
+        self.own_firmware_var = tk.BooleanVar(value=False)
+        own_fw_cb = ttk.Checkbutton(top_frame, text="Own STM32 firmware", variable=self.own_firmware_var, command=self.on_own_firmware_toggle)
+        own_fw_cb.pack(side=tk.LEFT, padx=(5, 10))
+
+        # Browse button and firmware path textbox
+        self.firmware_path_var = tk.StringVar()
+        self.browse_btn = ttk.Button(top_frame, text="Browse", command=self.browse_firmware, state="disabled")
+        self.browse_btn.pack(side=tk.LEFT)
+        self.firmware_entry = ttk.Entry(top_frame, textvariable=self.firmware_path_var, width=40, state="readonly")
+        self.firmware_entry.pack(side=tk.LEFT, padx=5)
+
+        # Filename to be uploaded (caption/non-editable)
+        self.upload_filename_var = tk.StringVar()
+        filename_frame = ttk.Frame(self)
+        filename_frame.pack(pady=(2, 0), fill=tk.X)
+        ttk.Label(filename_frame, text="Firmware to be uploaded:").pack(side=tk.LEFT, padx=(10, 5))
+        self.upload_filename_entry = ttk.Entry(filename_frame, textvariable=self.upload_filename_var, width=45, state="readonly")
+        self.upload_filename_entry.pack(side=tk.LEFT)
+
+        # TMC radio buttons and homing checkbox (below Browse)
+        tmc_homing_frame = ttk.Frame(self)
+        tmc_homing_frame.pack(pady=(0, 0), fill=tk.X)
+        self.tmc_var = tk.StringVar(value="TMC2209")
+        self.homing_var = tk.BooleanVar(value=True)
+        self.tmc_var.trace_add("write", lambda *args: self.update_upload_filename())
+        self.homing_var.trace_add("write", lambda *args: self.update_upload_filename())
+        self.tmc_frame = ttk.LabelFrame(tmc_homing_frame, text="TMC Module")
+        self.tmc_radio_2209 = ttk.Radiobutton(self.tmc_frame, text="TMC2209", variable=self.tmc_var, value="TMC2209")
+        self.tmc_radio_2130 = ttk.Radiobutton(self.tmc_frame, text="TMC2130", variable=self.tmc_var, value="TMC2130")
+        self.tmc_radio_5160 = ttk.Radiobutton(self.tmc_frame, text="TMC5160", variable=self.tmc_var, value="TMC5160")
+        self.tmc_radio_2209.pack(side=tk.LEFT, padx=2)
+        self.tmc_radio_2130.pack(side=tk.LEFT, padx=2)
+        self.tmc_radio_5160.pack(side=tk.LEFT, padx=2)
+        self.tmc_frame.pack(side=tk.LEFT, padx=10)
+        self.homing_cb = ttk.Checkbutton(tmc_homing_frame, text="Enable Homing", variable=self.homing_var)
+        self.homing_cb.pack(side=tk.LEFT, padx=10)
 
         # Serial port selection
         self.serial_ports = self.get_serial_ports()
@@ -26,15 +68,44 @@ class OnstepEspLoaderApp(tk.Tk):
         btn_frame = ttk.Frame(self)
         btn_frame.pack(pady=10)
         ttk.Button(btn_frame, text="Check STM32", command=self.read_stm32_id).pack(side=tk.LEFT, padx=5)
-        ttk.Button(btn_frame, text="Flash STM32", command=self.flash_stm32).pack(side=tk.LEFT, padx=5)
+        ttk.Button(btn_frame, text="Upload STM32", command=self.flash_stm32).pack(side=tk.LEFT, padx=5)
         ttk.Button(btn_frame, text="Check OnStepX", command=self.check_onstex).pack(side=tk.LEFT, padx=5)
         ttk.Button(btn_frame, text="SWS Upload Mode", command=self.switch_onstep_mode).pack(side=tk.LEFT, padx=5)
-        ttk.Button(btn_frame, text="Flash ESP", command=self.upload_esp8266).pack(side=tk.LEFT, padx=5)
+        ttk.Button(btn_frame, text="Upload ESP", command=self.upload_esp8266).pack(side=tk.LEFT, padx=5)
 
         # Status/console output
         ttk.Label(self, text="Console Output:").pack(pady=(10, 0))
         self.console = tk.Text(self, height=18, width=90, state="disabled", wrap="word", bg="#222", fg="#eee")
         self.console.pack(padx=10, pady=(0, 10), fill=tk.BOTH, expand=True)
+
+        # Initial state
+        self.update_upload_filename()
+        self.on_own_firmware_toggle()
+
+    def on_own_firmware_toggle(self):
+        # Only set 'state' on widgets that support it (Radiobutton, Checkbutton, Button, Entry)
+        if self.own_firmware_var.get():
+            self.browse_btn.config(state="normal")
+            self.firmware_entry.config(state="readonly")
+            self.tmc_radio_2209.config(state="disabled")
+            self.tmc_radio_2130.config(state="disabled")
+            self.tmc_radio_5160.config(state="disabled")
+            self.homing_cb.config(state="disabled")
+        else:
+            self.browse_btn.config(state="disabled")
+            self.firmware_entry.config(state="readonly")
+            self.tmc_radio_2209.config(state="normal")
+            self.tmc_radio_2130.config(state="normal")
+            self.tmc_radio_5160.config(state="normal")
+            self.homing_cb.config(state="normal")
+        self.update_upload_filename()
+
+    def browse_firmware(self):
+        from tkinter import filedialog
+        file_path = filedialog.askopenfilename(title="Select STM32 Firmware", filetypes=[("Binary Files", "*.bin"), ("All Files", "*.*")])
+        if file_path:
+            self.firmware_path_var.set(file_path)
+        self.update_upload_filename()
 
     def check_onstex(self):
         import threading
@@ -126,7 +197,22 @@ class OnstepEspLoaderApp(tk.Tk):
     def flash_stm32(self):
         import threading
         port = self.selected_port.get()
-        firmware = "firmware.bin"
+        # Determine firmware file
+        if self.own_firmware_var.get():
+            firmware = self.firmware_path_var.get()
+            if not firmware:
+                self.append_console("[ERROR] No firmware file selected.")
+                return
+        else:
+            tmc = self.tmc_var.get()
+            homing = self.homing_var.get()
+            if tmc == "TMC5160":
+                firmware = "firmware_5160_wH.bin" if homing else "firmware_5160_woH.bin"
+            elif tmc == "TMC2130":
+                firmware = "firmware_2130_wH.bin" if homing else "firmware_2130_woH.bin"
+            else:
+                firmware = "firmware_2209_wH.bin" if homing else "firmware_2209_woH.bin"
+
         if not port:
             self.append_console("[ERROR] No serial port selected.")
             return
@@ -247,6 +333,22 @@ class OnstepEspLoaderApp(tk.Tk):
                 self.append_console(f"[ERROR] Exception: {e}")
 
         threading.Thread(target=worker, daemon=True).start()
+
+    def update_upload_filename(self):
+        if self.own_firmware_var.get():
+            import os
+            path = self.firmware_path_var.get()
+            filename = os.path.basename(path) if path else ""
+        else:
+            tmc = self.tmc_var.get()
+            homing = self.homing_var.get()
+            if tmc == "TMC5160":
+                filename = "firmware_5160_wH.bin" if homing else "firmware_5160_woH.bin"
+            elif tmc == "TMC2130":
+                filename = "firmware_2130_wH.bin" if homing else "firmware_2130_woH.bin"
+            else:
+                filename = "firmware_2209_wH.bin" if homing else "firmware_2209_woH.bin"
+        self.upload_filename_var.set(filename)
 
 
 if __name__ == "__main__":
