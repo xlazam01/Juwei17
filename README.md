@@ -55,6 +55,8 @@ This repository contains subprojects to upgrade the Juwei17 mount with enhanced 
   - Temperature from DS1820
   - Humidity and pressure from BME280
 - TLS fallback (STM32 → GPS)
+- PlatformIO is used for OnStepX - My preferred IDE
+- Arduino for SWS - due to specific version of ESP toolchain needed
 
 ---
 
@@ -242,9 +244,9 @@ Default firmware configuration expects:
 
 - If you use OnStepX from Howard Dutton - there will be no support for STM32 RTC (time and date will not be stored) and weather service will provide false temperatures from BME280 (self-heating)
  - This could be potentially merged into main branch (I know that STM32 RTC was not planned - there are no official boards ready for this, weather fix is open)
-- For Juwei17 board use the OnStepX from this repository
+- For my Juwei17 board use the OnStepX from this repository
 - Change configuration as needed
-- For upload user Serial Bootloader - depending on your IDE how to do it 
+- For upload use Serial Bootloader - depending on your IDE (Arduino, PlatformIO) how to do it 
 - There are three pads on the bottom of the PCB to connect to ST-Link - you need to solder wires or a connector with 2mm pitch
 - If you want to use OnstepEspLoader just browse for your STM32 firmware binary
 - Binary file pattern:
