@@ -40,6 +40,7 @@ This repository contains subprojects to upgrade the Juwei17 mount with enhanced 
 - GPS interface
 - STM32F446 as main processor
 - Power switch not needed:
+  - Mount will start without switch connected
   - No high current goes through switch itself
   - When switch is closed, mount is off
 
@@ -206,7 +207,7 @@ This repository contains subprojects to upgrade the Juwei17 mount with enhanced 
     - WiFi LED will blink if firmware is present; if the ESP is empty, both LEDs will be off.
 5. **Start the OnstepEspLoader Python app.**
 6. **Select the correct TMC module type.**
-7. **Choose whether to enable homing** (can be disabled if needed).
+7. **Choose homing**
 8. **Click "Check STM32":**
     - The bootloader should respond.
     - If it fails, click again.
