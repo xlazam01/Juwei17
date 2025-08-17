@@ -3,19 +3,19 @@
   <img src="./Images/main.JPEG" alt="Juwei17 Upgrade" width="60%" />
 </div>
 
-
 ## 🚀 Project Overview
 
 This repository contains subprojects to upgrade the Juwei17 mount with enhanced hardware, software, and mechanics. The goal is to provide a modern, feature-rich, and user-friendly experience for astronomy enthusiasts.
 
 ---
 
-
 ## 🧑‍🔧 Skills Needed
 
  - Project is very DIY oriented
  - PCB is very dense and it is recommended to manufacture it via some service (JLCPCB or similar)
  - Some soldering (hall sensors, BME280, switch, connector crimping)
+
+---
 
 ## ✨ Upgrade Features
 
@@ -31,7 +31,6 @@ This repository contains subprojects to upgrade the Juwei17 mount with enhanced 
 - **Loader application** (semi-automatic programming for OnStep and SWS)
 
 ---
-
 
 ## 🧩 Hardware Features
 
@@ -69,7 +68,7 @@ This repository contains subprojects to upgrade the Juwei17 mount with enhanced 
 ## 📦 Required Components
 
 - New hardware - data on this github repo
-- 2x TMC Drivers - you can reuse TMC2209 from your orignal main board
+- 2x TMC Drivers - you can reuse TMC2209 from your original main board
   - TMC2209 UART - [link](https://www.aliexpress.com/item/33028050145.html)
   - TMC2130 SPI - [link](https://www.aliexpress.com/item/32970150483.html)
   - TMC5160 SPI - [link](https://www.aliexpress.com/item/1005006043696147.html)
@@ -79,15 +78,15 @@ This repository contains subprojects to upgrade the Juwei17 mount with enhanced 
 - 2× 3144 hall sensors for homing functionality [link](https://www.aliexpress.com/item/1005008305500149.html)
 - 16mm antivandal switch - 16mm, 12-24V, latching - [link](https://www.aliexpress.com/item/1005007144363231.html)
 - Wires, connectors, hot glue, etc.
-- Crimping plyers (Iwiss IWS-2820M)
+- Crimping pliers (Iwiss IWS-2820M)
 - Magnetic rings:
   - Magnets 20×5×2mm [link](https://www.aliexpress.com/item/1005009668801201.html)
     ⚠️ *Warning: Large deviation in sizes experienced!*
 - Screws M2×6 Voron style self-tapping screws - [link](https://www.aliexpress.com/item/1005003604942716.html)
 - 4x M3x16, 4x  M3x10 countersunk
 - optional 3144 hall sensor module for test [link](https://www.aliexpress.com/item/1005009110720818.html)
- - 5V power
- - It can help you to check polarity and sensitivity for you DIY magnet rings
+  - 5V power
+  - It can help you to check polarity and sensitivity for you DIY magnet rings
 
 ---
 
@@ -167,28 +166,28 @@ This repository contains subprojects to upgrade the Juwei17 mount with enhanced 
     - Fix them in place with hotglue
 7. **Mount the new 16mm switch and do wiring.**
     - We use NO contact for mount ON, NC contact for mount OFF
-    - Switch backlight is connected to maiboard
+    - Switch backlight is connected to mainboard
 8. **Prepare and install wiring for the GPS and BME280 modules.**
-    - Solder longer wires and cut them later to perfect lenght for BME280
-    - For GPS just cut the wire to perfect lenght
+    - Solder longer wires and cut them later to perfect length for BME280
+    - For GPS just cut the wire to perfect length
     - Install modules in cavities
     - Fix GPS with GPS_holder and small screws
 9. **Install the DS1820 sensor in the second cover.**
     - Pressfit the sensor in place
     - Cut wires to size
 10. **Secure all wires with hot glue.**
-    - Aim is to not have wire getting pinched during cover installation
+    - Aim is to not have wires getting pinched during cover installation
 11. **Trim wires to length and crimp connectors.**
 12. **Plug in jumper for UART/SPI TMC**
 13. **Insert TMC modules**
 14. **PCB installation**
     - Reuse brass standoff - insert them into holes in front cover
-    - Attach the PCB on these standoff    
+    - Attach the PCB to these standoffs    
 15. **Connect all components together.**
     - Install back cover
     - Plug in all connectors
     - Install front cover
-    - Screw in four screws for PCB from the botton of the mount
+    - Screw in four screws for the PCB from the bottom of the mount
 16. **Assembly complete!**
 
 ---
@@ -229,24 +228,25 @@ This repository contains subprojects to upgrade the Juwei17 mount with enhanced 
 
 ## ⚙️ Default Firmware Configuration
 
-Firmmare configuration expects
-- BME280, DS1820 - if initialization fails, ther will be no weather inforation on webserver
+Default firmware configuration expects:
+- BME280, DS1820 - if initialization fails, there will be no weather information on webserver
 - TMC2209, TMC5160 or TMC2130 - according to selected firmware during programming
-- Correct polarity of HAL sensors for homing - if not fullfiled, homing will not work correctly
-- Current is set to 1.0A for RUN and 1.3 for GOTO
+- Correct polarity of HAL sensors for homing - if not fulfilled, homing will not work correctly
+- Motor current is set to 1.0A for RUN and 1.3A for GOTO
 - Homing sense is HIGH
 
 ---
 
 ## 🏗️ Build Your Own OnStepX
 
-- If you use OnStepX from Howard Dutton - there will be no support for STM32 RTC (time and date will not be stored) and weather service will provide false temperatures from BME280 (selfheating)
+- If you use OnStepX from Howard Dutton - there will be no support for STM32 RTC (time and date will not be stored) and weather service will provide false temperatures from BME280 (self-heating)
  - This could be potentially merged into main branch (I know that STM32 RTC was not planned - there are no official boards ready for this, weather fix is open)
 - For Juwei17 board use the OnStepX from this repository
 - Change configuration as needed
 - For upload user Serial Bootloader - depending on your IDE how to do it 
-- There are three pads on the botton of the PCB to connec to ST-Link - you need to solder wires or connector with 2mm pitch
-- If you want to use OnstepEspLoader app copy to app folder and rename the binary file according to you this pattern:
+- There are three pads on the bottom of the PCB to connect to ST-Link - you need to solder wires or a connector with 2mm pitch
+- If you want to use OnstepEspLoader just browse for your STM32 firmware binary
+- Binary file pattern:
 
 | Firmware Name         | TMC Module | Homing      |
 |-----------------------|------------|-------------|
